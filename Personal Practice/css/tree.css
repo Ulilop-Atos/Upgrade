@@ -1,0 +1,16 @@
+.tree {
+  margin-top: 1rem;
+}
+
+.tree .node {
+  color: #ffffff;
+}
+
+.tree .red {
+  background: var(--red);
+}
+
+.tree .black {
+  background: var(--black);
+}
+/*# sourceMappingURL=tree.css.map */

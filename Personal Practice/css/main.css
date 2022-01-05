@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+:root {
+  --primary-color: #01d883;
+  --alt-color: #009F9B;
+  --black: #2F4858;
+  --red: #ed2400;
+}
+
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  font-family: Roboto, Verdana, sans-serif;
+}
+
+body b.red {
+  color: var(--red);
+}
+
+body b.black {
+  color: var(--black);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #ffffff;
+  padding: .75rem 1rem .5rem 1rem;
+  max-height: 3rem;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+}
+
+.navbar .logo span {
+  color: var(--primary-color);
+}
+
+.navbar .mobile-nav {
+  cursor: pointer;
+  display: block;
+}
+
+.navbar nav {
+  display: none;
+}
+
+section {
+  padding: 1em 2rem;
+}
+
+.navbar-spacer {
+  margin: 2rem;
+}
+
+section.definition {
+  text-align: center;
+}
+
+section.definition .title h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--alt-color);
+  letter-spacing: .25rem;
+}
+
+section.definition .title h1 {
+  font-size: 2.5rem;
+  line-height: 1.3rem;
+  margin-top: .2rem;
+}
+
+section.definition .title img {
+  width: 70%;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+section.definition .description {
+  text-align: justify;
+  background: #ffffff;
+  padding: .5rem 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+section.definition .description h2 {
+  margin-bottom: 0rem;
+}
+
+section.definition .sub-description {
+  background-color: var(--alt-color);
+  text-align: justify;
+  color: #ffffff;
+  margin-top: 2rem;
+  padding: .5rem 1.5rem;
+}
+
+section.definition .sub-description details[open] {
+  padding-top: .5rem;
+}
+
+section.implementation label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: lbl;
+}
+
+section.implementation input {
+  font-size: 1.1rem;
+  padding: .3rem;
+  border: groove;
+  border-radius: .3rem;
+}
+
+section.implementation input[type=button] {
+  font-weight: bold;
+  padding: .5rem;
+  border: none;
+  color: #ffffff;
+  background: var(--alt-color);
+}
+
+section.implementation input[type=button]:hover {
+  cursor: pointer;
+  background: var(--primary-color);
+}
+
+section.implementation input[type=button]:active {
+  position: relative;
+  top: 2px;
+}
+
+section.implementation .number-list {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: inp;
+}
+
+section.implementation .msg {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  grid-area: msg;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+
+section.implementation .msg #output {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section.implementation .fst-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: fst;
+}
+
+section.implementation .snd-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: snd;
+}
+
+section.implementation .trd-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: trd;
+}
+
+section.implementation form {
+  display: -ms-grid;
+  display: grid;
+  gap: .5rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "lbl lbl lbl msg" "inp inp inp msg" "fst snd trd msg";
+}
+
+section.business-card {
+  background: var(--alt-color);
+  margin-top: 5em;
+  text-align: center;
+  position: relative;
+}
+
+section.business-card img {
+  width: 10rem;
+  height: 10rem;
+  border: 5px solid var(--primary-color);
+  border-radius: 50%;
+  margin-top: -5.5em;
+}
+
+section.business-card blockquote {
+  text-align: justify;
+  background: #ffffff;
+  padding: .5rem;
+  border-radius: 1rem;
+}
+
+section.business-card blockquote:before, section.business-card blockquote:after {
+  content: '"';
+}
+
+section.business-card cite {
+  left: 0;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=main.css.map */

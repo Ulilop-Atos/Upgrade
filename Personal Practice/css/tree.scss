@@ -1,0 +1,16 @@
+.tree {
+    margin-top: 1rem;
+
+    .node {
+        color: #ffffff;
+
+    }
+    
+    .red {
+        background: var(--red);
+    }
+    
+    .black {
+        background: var(--black);
+    }
+}
