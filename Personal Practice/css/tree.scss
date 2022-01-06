@@ -1,10 +1,11 @@
+:root {
+    --black: #2F4858;
+    --red: #ed2400;
+  }
+
 .tree {
     margin-top: 1rem;
-
-    .node {
-        color: #ffffff;
-
-    }
+    text-align: center;
     
     .red {
         background: var(--red);
@@ -12,5 +13,12 @@
     
     .black {
         background: var(--black);
+    }
+
+    .node {
+        color: #ffffff;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
     }
 }

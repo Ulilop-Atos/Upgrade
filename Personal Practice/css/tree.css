@@ -1,9 +1,11 @@
-.tree {
-  margin-top: 1rem;
+:root {
+  --black: #2F4858;
+  --red: #ed2400;
 }
 
-.tree .node {
-  color: #ffffff;
+.tree {
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .tree .red {
@@ -12,5 +14,12 @@
 
 .tree .black {
   background: var(--black);
+}
+
+.tree .node {
+  color: #ffffff;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
 }
 /*# sourceMappingURL=tree.css.map */

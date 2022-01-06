@@ -72,17 +72,17 @@ section.definition {
   text-align: center;
 }
 
+section.definition .title h1 {
+  font-size: 2.5rem;
+  line-height: 1.3rem;
+  margin-top: .2rem;
+}
+
 section.definition .title h3 {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--alt-color);
   letter-spacing: .25rem;
-}
-
-section.definition .title h1 {
-  font-size: 2.5rem;
-  line-height: 1.3rem;
-  margin-top: .2rem;
 }
 
 section.definition .title img {
@@ -205,10 +205,9 @@ section.business-card {
   background: var(--alt-color);
   margin-top: 5em;
   text-align: center;
-  position: relative;
 }
 
-section.business-card img {
+section.business-card #github-photo {
   width: 10rem;
   height: 10rem;
   border: 5px solid var(--primary-color);
@@ -216,19 +215,71 @@ section.business-card img {
   margin-top: -5.5em;
 }
 
-section.business-card blockquote {
-  text-align: justify;
+section.business-card .contact-card {
+  height: 100%;
+  margin-top: 1rem;
+  padding: 2rem;
   background: #ffffff;
-  padding: .5rem;
   border-radius: 1rem;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  text-align: left;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  grid-auto-rows: auto;
 }
 
-section.business-card blockquote:before, section.business-card blockquote:after {
-  content: '"';
-}
-
-section.business-card cite {
-  left: 0;
+section.business-card .contact-card h1 {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  line-height: 0;
   font-size: 2rem;
+}
+
+section.business-card .contact-card h2 {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  line-height: 0rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+section.business-card .contact-card a {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5rem auto;
+      grid-template-columns: 1.5rem auto;
+  grid-auto-rows: auto;
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+section.business-card .contact-card a svg {
+  margin-top: -.1rem;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  width: 1rem;
+  fill: var(--primary-color);
+}
+
+section.business-card .contact-card img {
+  position: absolute;
+  width: 120px;
+  top: inherit;
+  right: 4rem;
+  padding-top: 1rem;
+}
+
+section.business-card .contact-card:hover .contact-card {
+  -webkit-box-shadow: 0 5px 10px 0 black;
+          box-shadow: 0 5px 10px 0 black;
 }
 /*# sourceMappingURL=main.css.map */

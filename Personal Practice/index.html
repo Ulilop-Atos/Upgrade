@@ -50,7 +50,7 @@
     <section class="definition">
         <div class="container">
             <div class="title">
-                <h3>Atos Upgrade © 2022 Presents</h3>
+                <h3>Atos © Upgrade 2022 Presents</h3>
                 <h1><b class="red">Red</b>-<b class="black">Black</b> Tree</h1>
                 <img src="images/tree.svg" alt="A Red-Black Tree"/>
             </div>
@@ -65,7 +65,7 @@
                         All the nodes on a rb-tree are color <b class="red">Red</b> or <b class="black">Black</b>.
                     </li>
                     <li>
-                        All the leaves <b>(NIL)</b> or empty nodes are <b class="black">Black</b>.
+                        All the leaves <b>(empty nodes)</b> are <b class="black">Black</b>.
                     </li>
                     <li>
                         The root of the tree is also <b class="black">Black</b>.
@@ -83,6 +83,7 @@
                     <summary>Click for details</summary>
                     <p>This implementation ensures <em>O(log n)</em>, where n is the number of elements, for the following operations: Search, Insert, and Delete.</p>
                     <p>Although we can create an rb-tree for any kind of comparable data, this implementation only works on Numbers.</p>
+                    <p>I wanted to try and replicate an old project I did using <b>Java</b> as an <b>SVG</b> generator for HTML pages of Red-Black Trees. But I also wanted to make it dynamic, cleaner, and only using <b>JavaScript</b> and <b>CSS</b>.</p>
                 </details>
             </div>
         </div>
@@ -118,31 +119,27 @@
     </section>
     
     <section class="business-card">
+        <img id="github-photo" src="https://via.placeholder.com/200" alt="My Github photo"/>
         <div class="container">
-            <img id="github-photo" src="https://via.placeholder.com/200" alt="My Github photo"/>
-            <blockquote>
-                I wanted to try and replicate an old project I did using 
-                <b>Java</b> as an <b>SVG</b> generator for HTML pages of 
-                Red-Black Trees. But I also wanted to make it dynamic, cleaner, 
-                and only using <b>JavaScript</b> and <b>CSS</b>.
-            </blockquote>
-            <cite>Ulises Lopez</cite>
-            <h1>Application Developer</h1>
-            <svg 
-                data-src="https://unpkg.com/@mdi/svg@latest/svg/cellphone.svg" 
-                title="My cellphone"> 
-            </svg>
-            <a href="tel:+525548895591">
-                (+52) 55 4889 5591
-            </a> 
-            <svg 
-                data-src="https://unpkg.com/@mdi/svg@latest/svg/email-variant.svg" 
-                title="My email"> 
-            </svg>
-            <a href="mailto:victor-ulises.lopez@atos.net">
-                victor-ulises.lopez@atos.net
-            </a>
-            <h2>Atos © Mexico</h2>
+            <div class="contact-card">
+                <img src="images/atos-logo.png" alt="The company I work for, Atos">
+                <h1>Ulises López</h1>
+                <h2>Application Developer</h2>
+                <a href="tel:+525548895591">
+                    <svg 
+                        data-src="https://unpkg.com/@mdi/svg@latest/svg/cellphone.svg" 
+                        title="My cellphone"> 
+                    </svg>
+                    (+52) 55 4889 5591
+                </a> 
+                <a href="mailto:victor-ulises.lopez@atos.net">
+                    <svg 
+                        data-src="https://unpkg.com/@mdi/svg@latest/svg/email-variant.svg" 
+                        title="My email"> 
+                    </svg>
+                    victor-ulises.lopez@atos.net
+                </a>
+            </div>
         </div>
     </section>
 </body>
