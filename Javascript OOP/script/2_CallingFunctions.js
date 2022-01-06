@@ -14,4 +14,5 @@ obj.foo();
 // Method #3 (In an implicit created object)
 new foo();
 
-// Method #4
+// Method #4 (Call argument is the obj referred by 'this.')
+foo.call();
