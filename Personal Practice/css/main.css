@@ -60,38 +60,75 @@ body b.black {
   display: none;
 }
 
+.navbar .menu-show {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  width: 33%;
+  right: 0;
+  top: 0;
+  background: var(--alt-color);
+  padding: 1em;
+}
+
+nav ul {
+  margin-top: 3em;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  font-size: 2em;
+  text-align: right;
+}
+
+nav li a:hover {
+  font-weight: bold;
+}
+
+nav #close-menu {
+  float: right;
+  fill: #ffffff;
+}
+
 section {
-  padding: 1em 2rem;
+  padding: 2em 2rem;
 }
 
 .navbar-spacer {
-  margin: 2rem;
+  margin: 3rem;
 }
 
-section.definition {
+section.hero {
   text-align: center;
 }
 
-section.definition .title h1 {
+section.hero .title h1 {
   font-size: 2.5rem;
   line-height: 1.3rem;
   margin-top: .2rem;
 }
 
-section.definition .title h3 {
+section.hero .title h3 {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--alt-color);
   letter-spacing: .25rem;
 }
 
-section.definition .title img {
+section.hero img {
   width: 70%;
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
-section.definition .description {
+section.hero .description {
   text-align: justify;
   background: #ffffff;
   padding: .5rem 2rem;
@@ -99,11 +136,11 @@ section.definition .description {
   margin-top: 2rem;
 }
 
-section.definition .description h2 {
+section.hero .description h2 {
   margin-bottom: 0rem;
 }
 
-section.definition .sub-description {
+section.hero .sub-description {
   background-color: var(--alt-color);
   text-align: justify;
   color: #ffffff;
@@ -111,111 +148,25 @@ section.definition .sub-description {
   padding: .5rem 1.5rem;
 }
 
-section.definition .sub-description details[open] {
+section.hero .sub-description details[open] {
   padding-top: .5rem;
 }
 
-section.implementation label {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: lbl;
-}
-
-section.implementation input {
-  font-size: 1.1rem;
-  padding: .3rem;
-  border: groove;
-  border-radius: .3rem;
-}
-
-section.implementation input[type=button] {
-  font-weight: bold;
-  padding: .5rem;
-  border: none;
-  color: #ffffff;
+section.contact {
   background: var(--alt-color);
-}
-
-section.implementation input[type=button]:hover {
-  cursor: pointer;
-  background: var(--primary-color);
-}
-
-section.implementation input[type=button]:active {
-  position: relative;
-  top: 2px;
-}
-
-section.implementation .number-list {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: inp;
-}
-
-section.implementation .msg {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 4;
-  grid-area: msg;
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-}
-
-section.implementation .msg #output {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section.implementation .fst-btn {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: fst;
-}
-
-section.implementation .snd-btn {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: snd;
-}
-
-section.implementation .trd-btn {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: trd;
-}
-
-section.implementation form {
-  display: -ms-grid;
-  display: grid;
-  gap: .5rem;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: "lbl lbl lbl msg" "inp inp inp msg" "fst snd trd msg";
-}
-
-section.business-card {
-  background: var(--alt-color);
-  margin-top: 5em;
+  margin-top: 3em;
   text-align: center;
 }
 
-section.business-card #github-photo {
+section.contact .business-card #github-photo {
   width: 10rem;
   height: 10rem;
   border: 5px solid var(--primary-color);
   border-radius: 50%;
-  margin-top: -5.5em;
+  margin-top: -6em;
 }
 
-section.business-card .contact-card {
+section.contact .business-card .contact-card {
   height: 100%;
   margin-top: 1rem;
   padding: 2rem;
@@ -233,14 +184,14 @@ section.business-card .contact-card {
   grid-auto-rows: auto;
 }
 
-section.business-card .contact-card h1 {
+section.contact .business-card .contact-card h1 {
   -ms-grid-column: 1;
   grid-column: 1;
   line-height: 0;
   font-size: 2rem;
 }
 
-section.business-card .contact-card h2 {
+section.contact .business-card .contact-card h2 {
   -ms-grid-column: 1;
   grid-column: 1;
   line-height: 0rem;
@@ -249,7 +200,7 @@ section.business-card .contact-card h2 {
   color: var(--primary-color);
 }
 
-section.business-card .contact-card a {
+section.contact .business-card .contact-card a {
   -ms-grid-column: 1;
   grid-column: 1;
   display: -ms-grid;
@@ -262,7 +213,7 @@ section.business-card .contact-card a {
   margin-bottom: 0;
 }
 
-section.business-card .contact-card a svg {
+section.contact .business-card .contact-card a svg {
   margin-top: -.1rem;
   -ms-grid-column: 1;
   grid-column: 1;
@@ -270,7 +221,7 @@ section.business-card .contact-card a svg {
   fill: var(--primary-color);
 }
 
-section.business-card .contact-card img {
+section.contact .business-card .contact-card img {
   position: absolute;
   width: 120px;
   top: inherit;
@@ -278,8 +229,112 @@ section.business-card .contact-card img {
   padding-top: 1rem;
 }
 
-section.business-card .contact-card:hover .contact-card {
+section.contact .business-card .contact-card:hover .contact-card {
   -webkit-box-shadow: 0 5px 10px 0 black;
           box-shadow: 0 5px 10px 0 black;
+}
+
+@media only screen and (min-width: 768px) {
+  #open-menu {
+    display: none;
+  }
+  .navbar .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background: none;
+    position: unset;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar nav a {
+    color: black;
+    font-size: 1em;
+    padding: .2em 1em;
+  }
+  .navbar nav ul {
+    margin: 0;
+  }
+  .navbar nav li a {
+    color: var(--primary-color);
+    border-radius: 5em;
+    white-space: nowrap;
+    margin-top: -.2em;
+  }
+  .navbar nav li a:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 5rem 4rem;
+  }
+  section.hero .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2 auto;
+        grid-template-columns: 2 auto;
+  }
+  section.hero .title {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  section.hero .title h1 {
+    font-size: 5rem;
+  }
+  section.hero .title h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--alt-color);
+    letter-spacing: .25rem;
+    margin-bottom: 2rem;
+  }
+  section.hero img {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    width: 100%;
+  }
+  section.hero .description {
+    text-align: justify;
+    background: #ffffff;
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+  }
+  section.hero .description h2 {
+    margin-bottom: 0rem;
+  }
+  section.hero .sub-description {
+    background-color: var(--alt-color);
+    text-align: justify;
+    color: #ffffff;
+    margin-top: 2rem;
+    padding: .5rem 1.5rem;
+  }
+  section.hero .sub-description details[open] {
+    padding-top: .5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

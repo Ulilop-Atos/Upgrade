@@ -1,24 +1,117 @@
 :root {
     --black: #2F4858;
     --red: #ed2400;
-  }
+    --line: #CCCCCC;
+    --font-color: #FFFFFF;
+}
+    
+input {
+    font-size: 1.1rem;
+    padding: .5rem;
+    border: groove;
+    border-radius: .5rem;
+}
+
+input[type=button] {
+    font-weight: bold;
+    padding: .5rem;
+    border: none;
+    color: var(--black);
+    background: var(--line);
+    
+    &:hover {
+        cursor: pointer;
+        background: var(--red);
+        color: var(--font-color);    
+    }
+
+    &:active {
+        position:relative;
+        top:2px;
+    }
+}
+
+form {
+    display: grid;
+    gap: .5rem;
+    grid-template-columns:  repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "lbl lbl lbl"
+        " .   .   . "
+        "inp inp inp"
+        "fst snd trd";
+
+    label {
+        grid-area: lbl;
+        font-size: 1.5rem;
+
+        small {
+            font-size: .8rem;
+        }
+    }
+
+    .number-list {
+        grid-area: inp;
+    }
+
+    .msg {
+        color: var(--red);
+        text-align: left;
+        min-height: 1rem;
+    }
+
+    .fst-btn {
+        grid-area: fst;
+    }
+    
+    .snd-btn {
+        grid-area: snd;
+    }
+    
+    .trd-btn {
+        grid-area: trd;
+    }   
+    
+}
+
+.red > .value > span {
+    background: var(--red);
+}
+
+.black > .value > span {
+    background: var(--black);
+}
 
 .tree {
     margin-top: 1rem;
-    text-align: center;
-    
-    .red {
-        background: var(--red);
-    }
-    
-    .black {
-        background: var(--black);
-    }
+    overflow-x: scroll;
 
     .node {
-        color: #ffffff;
-        border-radius: 50%;
-        width: 5rem;
-        height: 5rem;
+        width: 100%;
+        min-width: 7rem;
+        min-height: 7rem;
+
+        .value {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+
+            span {
+                display: flex;
+                align-items: center; 
+                justify-content: center;
+                color: var(--font-color);
+                border-radius: 50%;
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+        .children {
+            display: flex;
+            flex-wrap: nowrap;
+        }
     }
 }
+

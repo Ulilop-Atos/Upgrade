@@ -54,22 +54,63 @@ body {
         cursor: pointer;
         display: block;
     }
-
+    
     nav {
-        display:none;
+        display: none;   
+    }
+
+    .menu-show {
+        display: block;
     }
 
 }
 
+nav {
+    position: fixed;
+    width: 33%;
+    right: 0;
+    top: 0;
+    background: var(--alt-color);
+    padding: 1em;
+
+    ul {
+        margin-top: 3em;
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    li {
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            padding: .5em;
+            font-size: 2em;
+            text-align: right;
+
+            &:hover {
+                font-weight: bold;
+            }
+
+        }
+    }
+
+    #close-menu {
+        float: right;
+        fill: #ffffff;
+    }
+}
+
+
 section {
-    padding: 1em 2rem;
+    padding: 2em 2rem;
 }
 
 .navbar-spacer {
-    margin: 2rem;
+    margin: 3rem;
 }    
 
-section.definition {
+section.hero {
     text-align: center;
 
     .title {
@@ -87,11 +128,12 @@ section.definition {
             letter-spacing: .25rem;
         }
 
-        img {
-            width: 70%;
-            margin-top: 3rem;
-            margin-bottom: 2rem;
-        }
+    }
+    
+    img {
+        width: 70%;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
     }
 
     .description {
@@ -119,151 +161,188 @@ section.definition {
     }
 }
 
-section.implementation {
-    
-    label {
-        grid-area: lbl;
-    }
-
-    input {
-        font-size: 1.1rem;
-        padding: .3rem;
-        border: groove;
-        border-radius: .3rem;
-    }
-
-    input[type=button] {
-        font-weight: bold;
-        padding: .5rem;
-        border: none;
-        color: #ffffff;
-        background: var(--alt-color);
-        
-        &:hover {
-            cursor: pointer;
-            background: var(--primary-color);    
-        }
-
-        &:active {
-            position:relative;
-	        top:2px;
-        }
-    }
-
-    .number-list {
-        grid-area: inp;
-    }
-    
-    .msg {
-        grid-area: msg;
-        text-align: center;
-        vertical-align: middle;
-        position: relative;
-        #output {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-
-    .fst-btn {
-        grid-area: fst;
-    }
-
-    .snd-btn {
-        grid-area: snd;
-    }
-    
-    .trd-btn {
-        grid-area: trd;
-    }
-    
-    form {
-        display: grid;
-        gap: .5rem;
-        grid-template-columns:  repeat(4, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "lbl lbl lbl msg"
-            "inp inp inp msg"
-            "fst snd trd msg";
-    }
-
-}
-
-section.business-card {
+section.contact{
     background: var(--alt-color);
-    margin-top: 5em;
+    margin-top: 3em;
     text-align:center;
 
-    #github-photo {
-        width: 10rem;
-        height: 10rem;
-        border: 5px solid var(--primary-color);
-        border-radius: 50%;
-        margin-top: -5.5em;
-    }
-
-    .container {
-        
-    }
-
-    .contact-card {
-        height: 100%;
-        margin-top: 1rem;
-        padding: 2rem;
-        background: #ffffff;
-        border-radius: 1rem;
-        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-        text-align: left;
-        padding-top: 1rem;
-        padding-bottom: 1.5rem;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-auto-rows: auto;
-        
-        h1 {
-            grid-column: 1;
-            line-height: 0;
-            font-size: 2rem;
+    .business-card {
+        #github-photo {
+            width: 10rem;
+            height: 10rem;
+            border: 5px solid var(--primary-color);
+            border-radius: 50%;
+            margin-top: -6em;
         }
 
-        h2 {
-            grid-column: 1;
-            line-height: 0rem;
-            font-size: 1rem;
-            text-transform: uppercase;
-            color:var(--primary-color);
+        .contact-card {
+            height: 100%;
+            margin-top: 1rem;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+            text-align: left;
+            padding-top: 1rem;
+            padding-bottom: 1.5rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-auto-rows: auto;
+            
+            h1 {
+                grid-column: 1;
+                line-height: 0;
+                font-size: 2rem;
+            }
+
+            h2 {
+                grid-column: 1;
+                line-height: 0rem;
+                font-size: 1rem;
+                text-transform: uppercase;
+                color:var(--primary-color);
+            }
+
+            a {
+                grid-column: 1;
+                display: grid;
+                grid-template-columns: 1.5rem auto;
+                grid-auto-rows: auto;
+                text-decoration: none;
+                color: #000000;
+                margin-bottom: 0;
+                svg {
+                    margin-top: -.1rem;
+                    grid-column: 1;
+                    width: 1rem;
+                    fill: var(--primary-color);
+                }
+            }
+
+            img {
+                position: absolute;
+                width: 120px;
+                top: inherit;
+                right: 4rem;
+                padding-top: 1rem;
+            }
+
+            &:hover .contact-card {
+                box-shadow: 0 5px 10px 0 rgba(0,0,0,1);
+            } 
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    #open-menu{
+        display: none;
+    }
+
+    .navbar .container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .navbar nav {
+        display: flex;
+        justify-content: space-evenly;
+        background: none;
+        position: unset;
+        padding: 0;
+        margin: 0;
+
+        ul {
+            display: flex;
         }
 
         a {
-            grid-column: 1;
-            display: grid;
-            grid-template-columns: 1.5rem auto;
-            grid-auto-rows: auto;
-            text-decoration: none;
-            color: #000000;
-            margin-bottom: 0;
-            svg {
-                margin-top: -.1rem;
-                grid-column: 1;
-                width: 1rem;
-                fill: var(--primary-color);
+            color: black;
+            font-size: 1em;
+            padding: .2em 1em;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        li a {
+            color: var(--primary-color);
+            border-radius: 5em;
+            white-space: nowrap;
+            margin-top: -.2em;
+
+            &:hover {
+                background: var(--primary-color);
+                color: #ffffff;
             }
         }
+    }
+}
 
-        img {
-            position: absolute;
-            width: 120px;
-            top: inherit;
-            right: 4rem;
-            padding-top: 1rem;
-        }
+@media only screen and (min-width: 1080px) {
 
-        &:hover .contact-card {
-            box-shadow: 0 5px 10px 0 rgba(0,0,0,1);
-        } 
+    .container {
+        width: 1080px;
+        margin: 0 auto;
     }
 
+    section {
+        padding: 5rem 4rem;
+    }
+
+    section.hero {
+
+        .container{
+            display: grid;
+            grid-template-columns: 2 auto;
+        }
+    
+        .title { 
+            grid-column: 1;
+
+            h1 {
+                font-size: 5rem;
+            }
+    
+            h3 {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: var(--alt-color);
+                letter-spacing: .25rem;
+                margin-bottom: 2rem;
+            }
+    
+        }
+        img {
+            grid-column: 2;
+            width: 100%;
+        }
+    
+        .description {
+            text-align: justify;
+            background: #ffffff;
+            padding: .5rem 2rem;
+            border-radius: 1rem;
+            margin-top: 2rem;
+    
+            h2 {
+                margin-bottom: 0rem;
+            }
+        }
+    
+        .sub-description {
+            background-color: var(--alt-color);
+            text-align: justify;
+            color: #ffffff;
+            margin-top: 2rem;
+            padding: .5rem 1.5rem;
+    
+            details[open] {
+                padding-top: .5rem;
+            }
+        }
+    }
+        
 }
