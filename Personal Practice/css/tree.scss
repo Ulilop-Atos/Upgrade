@@ -4,32 +4,6 @@
     --line: #CCCCCC;
     --font-color: #FFFFFF;
 }
-    
-input {
-    font-size: 1.1rem;
-    padding: .5rem;
-    border: groove;
-    border-radius: .5rem;
-}
-
-input[type=button] {
-    font-weight: bold;
-    padding: .5rem;
-    border: none;
-    color: var(--black);
-    background: var(--line);
-    
-    &:hover {
-        cursor: pointer;
-        background: var(--red);
-        color: var(--font-color);    
-    }
-
-    &:active {
-        position:relative;
-        top:2px;
-    }
-}
 
 form {
     display: grid;
@@ -72,6 +46,32 @@ form {
     .trd-btn {
         grid-area: trd;
     }   
+
+    input {
+        font-size: 1.1rem;
+        padding: .5rem;
+        border: groove;
+        border-radius: .5rem;
+    }
+    
+    input[type=button] {
+        font-weight: bold;
+        padding: .5rem;
+        border: none;
+        color: var(--black);
+        background: var(--line);
+        
+        &:hover {
+            cursor: pointer;
+            background: var(--red);
+            color: var(--font-color);    
+        }
+    
+        &:active {
+            position:relative;
+            top:2px;
+        }
+    }
     
 }
 

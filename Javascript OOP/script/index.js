@@ -1,69 +1,44 @@
 /**
- * Pillars of OOP
- * 
- * Encapsulation:
- * Grouping related variables and functions that operate on them. Reduces complexity and increases usability.
- * 
- * Abstraction:
- * Simplify the interface of objects by hiding methods and variables, this reduces the impact of change. 
- * 
- * Inheritance:
- * The ability to share code between objects eliminates redundant code.
- * 
- * Polymorphism:
- * You only need to implement one particular way of doing something regarding an object. We can refactor switch/case statements.
- * 
+ * Ths objects in Js are mutable, can break their contracts, you can't warranty an object of some type always has the same behavior.
  */
 
-/**
- * Creating Objects
- */
-
-// Factory function
-function createCircle(radius) {
-    
-    return {
-        radius,
-        draw: function() {
-            console.log('draw');
-        }
-    };
-}
-const circle = createCircle(1);
-circle.draw(); 
-
-// Constructor function
 function Circle(radius) {
     this.radius = radius;
+
     this.draw = function() {
-        console.log('draw'); 
+        console.log('Draw');
     }
 }
-// We can create a new instance using Circle(), but the it creates all te variables as global variables, referencing 'this' to the higher element on the hierarchy, to prevent this, we use the keyword 'new' when creating an instance. 
-const another = new Circle();
-another.draw();
 
-// All the objects have a constructor property in javascript. use.constructor to access that reference.
+const circle = new Circle(10);
 
-/**
- * Functions as objects
- * All the functions are also an object here, the constructor of a function comes from the object Function. You can create a function making a new instance of that object.
- */
+console.log(circle); // ->
+// draw: ƒ ()
+// radius: 10
+// [[Prototype]]: Object
 
-// This will be equivalent to the definition of Circle(radius)
-const CircleWeird = new Function('radius', `
-    this.radius = radius;
-    this.draw = function() {
-        console.log('Draw radius of: ' + this.radius); 
-    }
-`);
+circle.location = {x:1};
 
-const weird = new CircleWeird(10);
- 
-// Circle.call({}, ...args);
-// Is equivalent to 
-// new Circle(...args);
-// The call method creates an instance using the object {} as the this reference.
+console.log(circle); // ->
+// draw: ƒ ()
+// location: {x: 1}
+// radius: 10
+// [[Prototype]]: Object
 
-// Is the same for Circle.apply({}, [...args]);
-// But [...args] will be an array.
+// We can access an object property using the name like in an array (or a String:obj map)
+console.log(circle['location'].x === circle['location']['x']);
+
+// You can delete a property or method from an object
+
+delete circle.location;
+console.log(circle); // ->
+// draw: ƒ ()
+// radius: 10
+// [[Prototype]]: Object
+
+// You can enumerate the prop of an obj like
+
+for (let key in circle) {
+    console.log(key);
+}
+
