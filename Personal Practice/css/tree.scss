@@ -75,11 +75,11 @@ form {
     
 }
 
-.red > .value > span {
+.node[color="red"] > .value > span {
     background: var(--red);
 }
 
-.black > .value > span {
+.node[color="black"] > .value > span {
     background: var(--black);
 }
 
