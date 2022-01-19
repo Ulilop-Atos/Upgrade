@@ -1,0 +1,140 @@
+:root {
+  --black: #2F4858;
+  --red: #ed2400;
+  --line: #CCCCCC;
+  --font-color: #FFFFFF;
+}
+
+form {
+  display: -ms-grid;
+  display: grid;
+  gap: .5rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "lbl lbl lbl" " .   .   . " "inp inp inp" "fst snd trd";
+}
+
+form label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: lbl;
+  font-size: 1.5rem;
+}
+
+form label small {
+  font-size: .8rem;
+}
+
+form .number-list {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: inp;
+}
+
+form .msg {
+  color: var(--red);
+  text-align: left;
+  min-height: 1rem;
+}
+
+form .fst-btn {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: fst;
+}
+
+form .snd-btn {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: snd;
+}
+
+form .trd-btn {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: trd;
+}
+
+form input {
+  font-size: 1.1rem;
+  padding: .5rem;
+  border: groove;
+  border-radius: .5rem;
+}
+
+form input[type=button] {
+  font-weight: bold;
+  padding: .5rem;
+  border: none;
+  color: var(--black);
+  background: var(--line);
+}
+
+form input[type=button]:hover {
+  cursor: pointer;
+  background: var(--red);
+  color: var(--font-color);
+}
+
+form input[type=button]:active {
+  position: relative;
+  top: 2px;
+}
+
+.node[color="red"] > .value > span {
+  background: var(--red);
+}
+
+.node[color="black"] > .value > span {
+  background: var(--black);
+}
+
+.tree {
+  margin-top: 1rem;
+  overflow-x: scroll;
+}
+
+.tree .node {
+  width: 100%;
+  min-width: 7rem;
+  min-height: 7rem;
+}
+
+.tree .node .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem 0;
+}
+
+.tree .node .value span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--font-color);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.tree .node .children {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+/*# sourceMappingURL=tree.css.map */
