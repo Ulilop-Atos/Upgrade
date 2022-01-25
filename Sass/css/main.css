@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #272727;
+  color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+  margin: 0 auto;
+}
+.main p {
+  font-weight: 700;
+}
+.main .main__paragraph1, .main .main__paragraph2 {
+  color: orange;
+}
+.main .main__paragraph1:hover, .main .main__paragraph2:hover {
+  color: white;
+}
+.main .main__paragraph2:hover {
+  color: coral;
+}
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
+}
