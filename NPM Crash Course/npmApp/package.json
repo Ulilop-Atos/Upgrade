@@ -1,0 +1,13 @@
+{
+  "name": "npmapp",
+  "version": "1.0.0",
+  "description": "An application for the NPM Crash Course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ulises Lopez - Copyright © Atos 2022",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
