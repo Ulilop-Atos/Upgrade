@@ -3,3 +3,7 @@
 
 # npm installation
 node_modules
+
+# Parcel folders
+dist
+.cache
