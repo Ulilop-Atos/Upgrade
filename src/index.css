@@ -1,0 +1,8 @@
+html, body {
+    color: aliceblue;
+    background-color: #21232a;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    padding: 10px;
+    margin: 0;
+}
