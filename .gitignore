@@ -1,9 +1,0 @@
-# Visual Studio Code Workspace
-.vscode  
-
-# npm installation
-node_modules
-
-# Parcel folders
-dist
-.cache
