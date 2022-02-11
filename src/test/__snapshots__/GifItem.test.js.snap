@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for <GifItem /> should render 1`] = `
+<div
+  className="card animate__delay-1s"
+>
+  <img
+    alt="Title of image"
+    src="https//localhost.app/Image.jpg"
+  />
+  <br />
+  <span>
+    Title of image
+  </span>
+</div>
+`;
