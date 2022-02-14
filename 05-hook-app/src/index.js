@@ -1,10 +1,10 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import { HooksApp } from './HooksApp';
+import { HookApp } from './HookApp';
 
 ReactDOM.render(
   <StrictMode>
-    <HooksApp />
+    <HookApp />
   </StrictMode>,
   document.getElementById('root')
 );
