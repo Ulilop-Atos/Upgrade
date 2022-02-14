@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <GifExpertApp /> should display a list of categories 1`] = `
+<Fragment>
+  <h2>
+     GIFExpertApp 
+  </h2>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <hr />
+  <ul>
+    <GifSearcher
+      category="One Punch Man"
+      key="0-One Punch Man"
+    />
+    <GifSearcher
+      category="Naruto"
+      key="1-Naruto"
+    />
+    <GifSearcher
+      category="Karla"
+      key="2-Karla"
+    />
+  </ul>
+</Fragment>
+`;
+
+exports[`Tests for <GifExpertApp /> should display properly 1`] = `
+<Fragment>
+  <h2>
+     GIFExpertApp 
+  </h2>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <hr />
+  <ul>
+    <GifSearcher
+      category="One Punch Man"
+      key="0-One Punch Man"
+    />
+    <GifSearcher
+      category="Naruto"
+      key="1-Naruto"
+    />
+  </ul>
+</Fragment>
+`;

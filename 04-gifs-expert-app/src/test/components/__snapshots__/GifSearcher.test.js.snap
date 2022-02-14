@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <GifSearcher /> should display images after loading hook 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    Test
+  </h3>
+  <div
+    className="card-container animate__animated animate__fadeIn"
+  >
+    <GifItem
+      id="ABC"
+      key="ABC"
+      title="Test gif ABC"
+      url="https://localhost.test.url/abc.gif"
+    />
+    <GifItem
+      id="DEF"
+      key="DEF"
+      title="Test gif DEF"
+      url="https://localhost.test.url/def.gif"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Tests for <GifSearcher /> should display properly 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    Test
+  </h3>
+  <p
+    className="animate__animated animate__flash"
+  >
+    Loading
+  </p>
+  <div
+    className="card-container animate__animated animate__fadeIn"
+  />
+</Fragment>
+`;

@@ -1,27 +1,28 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-const AddCategory = ({ updateArray }) => {
+const AddCategory = ({ setCategories }) => {
 
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (event) => setInputValue(event.target.value); 
 
   const validate = (str) => {
-    return str.match(/^[\S][\w\s]*\S$/gmiu);
+    return str.match(/^[\w][\w\s]*\S$/gmiu);
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const str = event.target[0].value;
-    if(updateArray && validate(str)) {
+    if(setCategories && validate( inputValue ) ) {
       // Callback edit
-      updateArray(prev => [str, ...prev]);
+      setCategories(prev => [ inputValue, ...prev]);
+      setInputValue('');
     }
   };
 
   return ( 
     <form onSubmit={ handleSubmit }>
+      <p>{inputValue}</p>
       <input 
         type='text'
         value={inputValue}
@@ -34,7 +35,7 @@ const AddCategory = ({ updateArray }) => {
 };
 
 AddCategory.propTypes = {
-  updateArray: PropTypes.func.isRequired,
+  setCategories: PropTypes.func.isRequired,
 };
 
 export default AddCategory;

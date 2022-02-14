@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import AddCategory from './components/AddCategory';
 import GifSearcher from './components/GifSearcher';
 
-const GifExpertApp = (props) => {
+const GifExpertApp = ({ defaultCategories = ['One Punch Man', 'Naruto'] }) => {
 
-    const [categories, setCategories] = useState(['One Punch Man', 'Naruto']);
+    const [categories, setCategories] = useState(defaultCategories);
 
     return (
         <>
             <h2> GIFExpertApp </h2>
-            <AddCategory updateArray={ setCategories } />
+            <AddCategory setCategories={ setCategories } />
             <hr/>
             <ul>
             {
@@ -27,7 +27,7 @@ const GifExpertApp = (props) => {
 };
 
 GifExpertApp.propTypes = {
-    props: PropTypes.any,
+    defaultCategories: PropTypes.array,
 };
 
 export default GifExpertApp;

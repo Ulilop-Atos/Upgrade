@@ -26,7 +26,7 @@ describe('Test for <GifItem />', () => {
   test('should have the class card', () => {
     const div = wrapper.find('div');
     const className = div.prop('className');
-    expect(className).toContain(`card`);
+    expect(className).toContain('card');
   });
 
 });
