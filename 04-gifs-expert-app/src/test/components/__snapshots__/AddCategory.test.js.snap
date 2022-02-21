@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <AddCategory /> should display correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <p />
+  <input
+    onChange={[Function]}
+    pattern="^[\\\\S][\\\\w\\\\s]*\\\\S$"
+    placeholder="Search"
+    type="text"
+    value=""
+  />
+</form>
+`;
