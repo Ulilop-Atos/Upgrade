@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <MainApp /> should display properly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "setUser": [Function],
+      "user": Object {},
+    }
+  }
+>
+  <AppRouter />
+</ContextProvider>
+`;

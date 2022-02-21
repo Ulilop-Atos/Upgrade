@@ -12,6 +12,10 @@ export const FormWithCustomHook = () => {
 
   const {name, email, password } = formValues;
 
+  useEffect( () => {
+    console.log('Email changed')
+  }, [ email ]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formValues);

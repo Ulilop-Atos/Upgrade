@@ -8,8 +8,8 @@ export const SimpleForm = () => {
     email: '',
   });
   
-  useEffect(() => {
-  }, []);
+
+  
 
   useEffect(() => {
   }, [email]);

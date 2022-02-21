@@ -1,8 +1,12 @@
-import React from 'react'
-import { FormWithCustomHook } from './components/02-useEffect/FormWithCustomHook'
+import { MultipleCustomHooks } from "./components/03-examples/MultipleCustomHooks";
+import MainApp from "./components/09-useContext/MainApp";
 
 export const HookApp = () => {
   return (
-    <FormWithCustomHook />
+    <>
+      <MainApp />
+      <MultipleCustomHooks />
+    </>
+
   )
 }
