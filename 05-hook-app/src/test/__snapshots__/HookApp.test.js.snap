@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <HookApp /> should display properly 1`] = `
+<Fragment>
+  <MainApp />
+  <MultipleCustomHooks />
+</Fragment>
+`;
