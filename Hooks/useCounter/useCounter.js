@@ -1,32 +1,32 @@
 import { useState } from 'react';
 
-export const useCounter = ( initialState = 0 ) => {
+export const useCounter = ( initialCounter = 0 ) => {
 
-  const [state, setState] = useState(initialState);
+  const [counter, setCounter] = useState(initialCounter);
   
   const increment = ( n = 1 ) => {
-    if (typeof n !== typeof state) {
-      throw new Error(`Cannot increment, ${n} is not a number.`)
+    if (typeof n !== typeof counter) {
+      throw new Error(`Error on increment, ${n} is not a number.`);
     }
-    setState(state + n);
+    setCounter(counter + n);
   };
   
   const decrement = ( n = 1 ) => {
-    if (typeof n !== typeof state) {
-      throw new Error(`Cannot decrement, ${n} is not a number.`)
+    if (typeof n !== typeof counter) {
+      throw new Error(`Error on decrement, ${n} is not a number.`);
     }    
-    setState(state - n);
+    setCounter(counter - n);
   };
  
-  const reset = ( n = initialState ) => {
-    if (typeof n !== typeof state) {
-      throw new Error(`Cannot set to ${n}, is not a number.`)
+  const reset = ( n = initialCounter ) => {
+    if (typeof n !== typeof counter) {
+      throw new Error(`Error on reset, ${n} is not a number.`);
     } 
-    setState( n );
+    setCounter( n );
   };
 
   return ({
-    state,
+    counter,
     decrement,
     increment,
     reset,
