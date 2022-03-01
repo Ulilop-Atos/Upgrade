@@ -4,18 +4,15 @@ import { AuthContext } from "../../auth/AuthContext";
 import { types } from "../../types";
 
 export const LoginScreen = () => {
-
-  const navigate = useNavigate();
   
-  const lastPath = localStorage.getItem('lastPath') || '/';
-
   const {dispatch} = useContext(AuthContext);
-
+  const navigate = useNavigate();  
+  
   let name = 'Log Username';
   let mail = 'temp@mail.com';
-
+  
   const handleLogin = () => {
-
+    
     const action = {
       type: types.login,
       payload: {
@@ -23,9 +20,11 @@ export const LoginScreen = () => {
         mail,
       },
     }
-
+    
     dispatch(action);
-
+  
+    const lastPath = localStorage.getItem('lastPath') || '/';
+    
     navigate(lastPath , {
       replace: true
     });

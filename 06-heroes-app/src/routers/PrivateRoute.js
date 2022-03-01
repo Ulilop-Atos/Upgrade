@@ -10,7 +10,7 @@ const PrivateRoute = ({ children }) => {
   const {pathname, search} =  useLocation();
 
   localStorage.setItem('lastPath', `${pathname}${search}`);
-  
+
   return user.logged ? children: <Navigate to='/login' />;
 }
 
