@@ -1,0 +1,14 @@
+.col-red {
+  background-color: red;
+  height: 100px;
+}
+.col-yellow {
+  background-color: yellow;
+}
+.col-blue {
+  background-color: blue;
+}
+
+.fg {
+  background-color: darkgrey;
+}
