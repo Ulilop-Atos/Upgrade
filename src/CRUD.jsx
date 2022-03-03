@@ -10,7 +10,6 @@ const CRUD = props => {
 
 CRUD.propTypes = {
   props: PropTypes.object,
-}
+};
 
-export default CRUD
-skeleton 
+export default CRUD;
