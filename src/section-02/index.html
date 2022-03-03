@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap@^5/dist/css/bootstrap.min.css"
+    crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" type="text/css" href="https://www.unpkg.com/bootstrap-icons@^1/font/bootstrap-icons.css"
+    crossorigin="anonymous">
+  <!-- Font awesome Icons -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@fortawesome/fontawesome-free@^6/css/all.min.css"
+    crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/index.min.css">
+  <title>Bootstrap</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Contact Form</h1>
+    <hr>
+    <form>
+      <div class="row g-3 mb-3">
+        <div class="col">
+          <div class="form-floating">
+            <input type="text" id="firstName" class="form-control" placeholder="First Name" />
+            <label for="firstName">First Name</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-floating">
+            <input type="text" id="lastName" class="form-control" placeholder="Last Name" />
+            <label for="lastName">Last Name</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" id="email" class="form-control" placeholder="name@domain.com" />
+        <label for="email">Email</label>
+      </div>
+      <div class="form-floating">
+        <input type="phone" id="phone" class="form-control" placeholder="+01 000 000 0000" />
+        <label for="phone">Phone</label>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <legend class="col-form-label">Contact me via:</legend>
+          <div class="form-check">
+            <div class="form-check-inline form-switch">
+              <input type="checkbox" name="contact-way" class="form-check-input" id="contactEmail" checked
+                autocomplete="off">
+              <label class="form-check-label" for="contactEmail">Email</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input type="checkbox" name="contact-way" class="form-check-input" id="contactPhone" checked
+                autocomplete="off">
+              <label class="form-check-label" for="contactPhone">Phone</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <legend class="col-form-label">Preferred contact time</legend>
+          <div class="form-check mb-3">
+            <div class="form-check-inline">
+              <input type="radio" name="contact-time" class="btn-check" id="contactMorning" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="contactMorning">7am</label>
+              <input type="radio" name="contact-time" class="btn-check" id="contactAfternoon" autocomplete="off" checked>
+              <label class="btn btn-outline-secondary" for="contactAfternoon">1pm</label>
+              <input type="radio" name="contact-time" class="btn-check" id="contactNight" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="contactNight">6pm</label>
+              <input type="radio" name="contact-time" class="btn-check" id="contactNever" autocomplete="off" disabled>
+              <label class="btn btn-outline-secondary m-1 ms-0" for="contactNever">Never</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary form-control">Send Contact info <icon
+          class="bi bi-person-lines-fill"></icon></button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script type="text/javascript" src="https://unpkg.com/bootstrap@^5/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

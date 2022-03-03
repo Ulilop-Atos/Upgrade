@@ -15,8 +15,18 @@
   <title>Bootstrap</title>
 </head>
 <body>
-  <h1>Template</h1>
+  <h1>Button Groups</h1>
   <div class="container">
+    <div class="btn-group">
+      <button class="btn btn-success" type="button">Windows</button>
+      <button class="btn btn-success" type="button">Mac OS</button>
+      <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" id="dropdownOs" type="button">Linux</button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownOs">
+        <li><a class="dropdown-item" href="#">Ubuntu</a></li>
+        <li><a class="dropdown-item" href="#">Arch</a></li>
+        <li><a class="dropdown-item" href="#">Solus</a></li>
+      </ul>
+    </div>
   </div>
 
   <!-- Bootstrap JS -->

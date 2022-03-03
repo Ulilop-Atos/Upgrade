@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap@^5/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" type="text/css" href="https://www.unpkg.com/bootstrap-icons@^1/font/bootstrap-icons.css" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href=".../css/index.min.css">
+  <title>Bootstrap</title>
+</head>
+<body>
+  <h1>Forms</h1>
+
+  <div class="container mb-2">
+    <h3> Basic use </h3>
+    <div class="row justify-content-center">
+      <form>
+        <div class="mb-3">
+          <label for="form_mail" class="form-label"> Email </label>
+          <input type="email" name="email" id="form_mail" class="form-control"/>
+        </div>
+        <div class="mb-4">
+          <label for="form_pass" class="form-label"> Password </label>
+          <input type="password" name="password" id="form_pass" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-info"><icon class="bi bi-box-arrow-in-right"></icon> Let me in! </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3> More uses </h3>
+    <div class="row justify-content-center">
+      <form>
+        <div class="row">
+          <div class="col-auto mb-3">
+            <label for="from_text" class="form-label"> Text </label>
+            <input type="text" name="text-input" id="from_text" class="form-control"/>
+        </div>
+        <div class="col-auto mb-3">
+          <label for="from_phone" class="form-label"> Phone </label>
+          <input type="tel" name="text-phone" id="from_tel" class="form-control"/>
+        </div>
+        <div class="col-auto mb-3">
+          <label for="form_balance" class="form-label"> Balance </label>
+          <div class="input-group">
+            <span class="input-group-text">$</span>
+            <input type="number" name="text-input"  id="form_balance" class="form-control"/>
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script type="text/javascript" src="https://unpkg.com/bootstrap@^5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
