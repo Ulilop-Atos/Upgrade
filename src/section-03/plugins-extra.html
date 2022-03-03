@@ -15,8 +15,33 @@
   <title>Bootstrap</title>
 </head>
 <body>
-  <h1>Template</h1>
-  <div class="container">
+  <div class="container-fluid">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#modal1"
+      >
+      Click to display modal
+    </button>
+  </div>
+  <div id="modal1" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-tittle">An example of modal box</h3>
+          <span
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            >
+          </span>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti accusamus tempora consectetur incidunt? Veritatis quam sint, praesentium accusamus aspernatur similique amet iusto dolor reiciendis magnam molestias dicta voluptate assumenda minus.
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Bootstrap JS -->

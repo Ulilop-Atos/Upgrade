@@ -15,9 +15,28 @@
   <title>Bootstrap</title>
 </head>
 <body>
-  <h1>Template</h1>
   <div class="container">
+    <h1>Plugins</h1>
+  </div> 
+  <div id="fstAlert" class="alert alert-primary alert-dismissible fade show" role="alert">
+    <a href="#" class="btn-close" data-bs-dismiss="alert"></a>
+    Lorem ipsum dolor sit amet.
   </div>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active"><img src="../images/sample.png" alt="Example" class="d-block h-25"></div>
+      <div class="carousel-item"><img src="../images/sample.gif" alt="Example" class="d-block h-25"></div>
+      <div class="carousel-item"><img src="../images/sample.jpg" alt="Example" class="d-block h-25"></div>
+    </div>
+  </div>
+  <button 
+    type="button" 
+    class="btn btn-lg btn-danger" 
+    data-bs-toggle="popover" 
+    title="Popover title" 
+    data-bs-content="This content will pop over!">
+    Popover plugin
+  </button>
 
   <!-- Bootstrap JS -->
   <script type="text/javascript" src="https://unpkg.com/bootstrap@^5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

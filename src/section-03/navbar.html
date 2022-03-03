@@ -15,13 +15,29 @@
   <title>Bootstrap</title>
 </head>
 <body>
-  <h1>Template</h1>
   <div class="container">
+    <h1>Menus</h1>
+    <nav class="navbar navbar-light" style="background-color: #ccdddd;">
+      <ul class="nav nav-pills" >
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Product A</a></li>
+            <li><a class="dropdown-item" href="#">Product B</a></li>
+            <li><a class="dropdown-item" href="#">Product C</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Shipping</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Costumer Service</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+      </ul>
+    </nav>
   </div>
 
   <!-- Bootstrap JS -->
   <script type="text/javascript" src="https://unpkg.com/bootstrap@^5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <!-- Custom JS -->
-  <script type="text/javascript" src="../javascript/index.js"></script>
 </body>
 </html>

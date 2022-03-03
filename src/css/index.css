@@ -1,6 +1,5 @@
 .col-red {
   background-color: red;
-  height: 100px;
 }
 .col-yellow {
   background-color: yellow;
@@ -16,4 +15,8 @@
 .container {
   margin: 4%;
   padding: 2%;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "|";
 }
