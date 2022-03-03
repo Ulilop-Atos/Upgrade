@@ -1,9 +1,35 @@
-# Atos - Upgrade 2022
-*****
+### Atos - Upgrade 2022
 
-A repository dedicated to the Atos Upgrade program. 
 
-This is a monolithic repository, please take a look to the [branches](https://github.com/Ulilop-Atos/Upgrade/branches/) to see the different projects on the Upgrade program.   
+# DRAW
+
+Don't Recreate A Wheel (DRAW) is a initiative to generate a library of commonly used wed sections and plugins, publicly available, ready to implement, and customizables.
+
+This initiative supports standardization, well use the term "Component" as used in the REACT library to refer to a section like a navigation bar, a hero section, a contact form, login form, sign up form, etc... 
+
+This is the stander directory tree of a DRAW project:
+
+```bash
+ProjectName
+├── src/
+│   ├── index.html
+│   ├── lib/
+│   │   ├── main.js
+│   │   ├── imported-library-1/
+│   │   ├── ...
+│   │   └── imported-library-n/
+│   ├── sass/
+│   │   └── style.scss
+│   ├── css/
+│   │   └── style.min.css
+│   ├── fonts/
+│   │   └── My-Font.ttf
+│   └── img/
+│       ├── sample.jpg
+│       └── section-header/
+│           └── header.jpg
+└── README.md
+```
 
 ***
 ## Ulises Lopez 
