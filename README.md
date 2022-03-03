@@ -7,29 +7,34 @@ Don't Recreate A Wheel (DRAW) is a initiative to generate a library of commonly 
 
 This initiative supports standardization, well use the term "Component" as used in the REACT library to refer to a section like a navigation bar, a hero section, a contact form, login form, sign up form, etc... 
 
-This is the stander directory tree of a DRAW project:
+This is the standard directory tree of a DRAW project:
 
 ```bash
-ProjectName
+ProjectName/
 ├── src/
 │   ├── index.html
 │   ├── lib/
 │   │   ├── main.js
-│   │   ├── imported-library-1/
-│   │   ├── ...
-│   │   └── imported-library-n/
-│   ├── sass/
-│   │   └── style.scss
-│   ├── css/
-│   │   └── style.min.css
-│   ├── fonts/
-│   │   └── My-Font.ttf
-│   └── img/
-│       ├── sample.jpg
-│       └── section-header/
-│           └── header.jpg
+│   │   ├── imported-lib-name/
+│   │   │   └── ...
+│   │   └── another-imported-lib/
+│   │       └── ...
+│   ├── style/
+│   │   ├── sass/
+│   │   │   └── main.scss
+│   │   ├── css/
+│   │   │   └── main.css
+│   │   └── fonts/
+│   │       └── ...
+│   └── media/
+│       ├── img/
+│       │   └── ...
+│       └── video/
+│           └── ...
 └── README.md
 ```
+
+More folders can be added for audio, etc...
 
 ***
 ## Ulises Lopez 
