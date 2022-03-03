@@ -23,7 +23,7 @@ ProjectName/
 │   │   ├── sass/
 │   │   │   └── main.scss
 │   │   ├── css/
-│   │   │   └── main.css
+│   │   │   └── main.min.css
 │   │   └── fonts/
 │   │       └── ...
 │   └── media/
@@ -33,8 +33,6 @@ ProjectName/
 │           └── ...
 └── README.md
 ```
-
-More folders can be added for audio, etc...
 
 ***
 ## Ulises Lopez 
